@@ -16,5 +16,78 @@ brasileiros dedicados ao ensino de matemática, com no mínimo 10 mil inscritos.
 Os dados foram coletados em: 2026-01-12.
 
 ## Estrutura do repositório
-- `data/`: arquivos CSV contendo os dados coletados
-- `scripts/`: scripts utilizados para a coleta e o processamento dos dados
+data/└ raw/
+      
+      ├ dados_canais_youtube.csv
+      ├ all_videos.csv
+      ├ video_details.csv
+
+scripts/
+      
+      ├ extrair_ids_canais.py
+      ├ analise_canais_youtube.py
+
+## Funcionalidades dos Scripts
+
+### Extração de IDs
+Script para converter URLs/handles de canais YouTube em IDs oficiais (UC...)
+
+---
+
+### Coleta de dados via API
+- Estatísticas dos canais
+- Estatísticas dos vídeos
+- Duração dos vídeos
+- Curtidas, comentários e visualizações
+
+---
+
+### Processamento e análise
+- Cálculo do Índice de Performance
+- Estatísticas descritivas
+- Boxplots e correlações
+- Ranking de canais
+
+---
+
+### Análise de vídeos (Top vídeos por canal)
+Permite filtrar por:
+
+- Índice de performance mínimo
+- Ano específico
+- Métrica (Curtidas, Comentários, Visualizações)
+
+---
+
+## ▶️ Como executar
+
+### 1️⃣ Instalar dependências
+```bash
+pip install -r requirements.txt
+```
+
+### 2️⃣ Configurar API Key (Opcional)
+Caso queira coletar novos dados:
+```
+api_key = "SUA_CHAVE"
+requisitar_da_api = True
+```
+Caso contrário:
+
+```
+requisitar_da_api = False
+```
+---
+
+### 3️⃣ Executar script principal
+python analise_canais_youtube.py
+
+---
+
+## Observações
+Os arquivos CSV permitem reprodutibilidade sem necessidade de acesso à API.
+
+---
+
+## Licença
+Uso acadêmico e educacional.
